@@ -1,0 +1,11 @@
+version: '3'
+services:
+  auth_db:
+    image: mongo:latest
+    container_name: "auth_db"
+    environment:
+      - MONGO_LOG_DIR=/dev/null
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/gokul/volumes/capturedin:/data/db
